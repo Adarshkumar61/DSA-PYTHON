@@ -1,19 +1,9 @@
-#taking multiple inputs in one line :
-
-# n = input('enter numbers: ')
-# arr = list(map(int, n.split()))
-# print(arr)
-# # taking list input:
-
-# n = int(input('enter numbers: '))
-# arr = list(map(int, input.split))
+# taking multiple inputs in one line :
 
 # take numbers in one line
 # arr = list(map(int, input("Enter numbers separated by space: ").split()))
-
 # # print the list
 # print("Numbers:", arr)
-
 # # print the sum
 # print("Sum:", sum(arr))
 
@@ -41,7 +31,32 @@
 
 
 # obj = NumberInput()
-
 # numbers = obj.get_numbers()
 # obj.display(numbers)
 
+
+# set name and show:
+# multiple obj:
+class student:
+    def set_name(self, name):
+        self.name = name #+ ' kumar'
+
+    def show_name(self):
+        print(self.name + ' kumar')
+
+s1 = student()
+s2 = student()
+
+# s1.set_name('adarsh'.title())
+# s2.set_name('rahul')
+# s1.show_name()
+# s2.show_name()
+
+#using constructor:
+class student:
+    def __init__(self, name , age):
+        self.name = name
+        self.age = age
+s1 = student('adarsh', 19)
+print(s1.name)
+print(s1.age)
