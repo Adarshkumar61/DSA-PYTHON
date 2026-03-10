@@ -192,21 +192,155 @@
 
 # for upper pyramid :
 
+# n = 5
+# for i in range(1, n+1):
+#     space = n -i
+#     star = 2 * i -1
+#     for j in range(space):
+#         print(" ", end= "")
+#     for j in range(star):
+#         print("*", end= "")
+#     print()
+# #for lower traingle :
+# for i in range(1, n +1):
+#     space = i
+#     star = 2*(n-i)-1
+#     for j in range(space):
+#         print(" ", end= "")
+#     for j in range(star):
+#         print("*", end= "")
+#     print()
+
+
+
+# question:
+# *
+# **
+# ***
+# ****
+# *****
+# ****
+# ***
+# **
+# *
+# answer :
+
+# right angle then opposite right angle:
+n = 7
+# for i in range(1,n+1):
+#     for j in range(i):
+#         print("*", end= "")
+#     print()
+# for i in range(1, n):
+#     for j in range(n-i):
+#         print("*", end= "")
+#     print()
+
+
+#question :
+
+# 1 
+# 0 1 
+# 1 0 1 
+# 0 1 0 1 
+# 1 0 1 0 1
+# solution:
+# n = 5
+# for i in range(1, n+1):          # rows
+#     for j in range(1, i+1):      # numbers = i (increasing)
+#         if (i + j) % 2 == 0:     # even → 1
+#             print(1, end=" ")
+#         else:                     # odd → 0
+#             print(0, end=" ")
+#     print()
+
+
+# question:
+# 1        1
+# 12      21
+# 123    321
+# 1234  4321
+# 1234554321
+
+# approaching by dividing in 2 :
+# n = 5
+# for i in range(1, n+1):
+
+#     # left numbers
+#     for j in range(1, i+1):
+#         print(j, end="")
+
+#     for j in range(2*(n -i)):
+#         print(" ", end= "")
+#     for j in range(i, 0, -1):
+#         print( j, end= "")
+        
+#     print()
+
+# question:
+# 1 
+# 2 3 
+# 4 5 6 
+# 7 8 9 10 
+# 11 12 13 14 15
+
+# n = 5
+# num = 1
+# for i in range(1, n+1):
+#     for j in range(i):
+#         print(num, end = "")
+#         num +=1
+#     print()
+
+
+# question : repeating of row no:
+# 1
+# 22
+# 333
+# 4444
+# 55555
+# n = 5
+# for i in range(1, n +1):
+#     for j in range(1,i+1, -1):
+#         print(j, end= "")
+#     print()
+
+
+# question: 
+# 1
+# 21
+# 321
+# 4321
+# 54321
+# n =6 
+# for i in range(1, n):
+#     for j in range(n -i):
+#         print("", end= "")# left aligned do " " for right aligned
+#     # for j in range(1,i+1): # if no is ascending 
+#     for j in range(i , 0, -1): # if decreasing 
+#         print(j, end= "")
+#     print()
+# n = 6
+# for i in range(1, n):
+#     for j in range(n -i):
+#         print("", end = "") # change the space for direction
+#     for j in range(1, i  +1):
+#         print(j, end = "")
+#     print()
+
+
+
+# 1
+# 23
+# 456
+# 78910
+# 1112131415
+
 n = 5
-for i in range(1, n+1):
-    space = n -i
-    star = 2 * i -1
-    for j in range(space):
-        print(" ", end= "")
-    for j in range(star):
-        print("*", end= "")
-    print()
-#for lower traingle :
 for i in range(1, n +1):
-    space = i
-    star = 2*(n-i)-1
+    space = n -i
     for j in range(space):
-        print(" ", end= "")
-    for j in range(star):
-        print("*", end= "")
+        print("", end= "")
+    for j in range(1, i+1):
+        print(i, end= "")
     print()
