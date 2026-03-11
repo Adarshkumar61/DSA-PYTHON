@@ -1,3 +1,4 @@
+n =5
 # row = 5
 # col = 5
 # for i in range(row):
@@ -331,16 +332,49 @@ n = 7
 
 
 # 1
+# 22
+# 333
+# 4444
+ # code:
+
+# for i in range(1, n):
+#     for j in range(i):
+#         print(i, end= "")
+#     print()
+#using string multiplication:
+# for i in range(1, n +1):
+#     print(str(i)*i)
+
+# 1
 # 23
 # 456
 # 78910
 # 1112131415
+# num =1
+# for i in range(1, n):
+#     for j in range(1, i+1):
+#         print(num, end= "")
+#         num +=1
+#     print()
 
-n = 5
-for i in range(1, n +1):
-    space = n -i
-    for j in range(space):
-        print("", end= "")
-    for j in range(1, i+1):
-        print(i, end= "")
-    print()
+
+# pattern:
+# 1
+# 12
+# 121
+# 12321
+# 1234321
+
+# first_part = 1-i
+# second_part = i -2 to 1
+
+# for i in range(1, n+1):
+#     #for increasing part
+#     for j in range(1, i+1):
+#         print(j, end= "")
+    
+#     #for decreasing
+#     for j in range(i-1, 0, -1):
+#         print(j, end= "")
+#     print()
+
