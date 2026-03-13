@@ -38,5 +38,5 @@
 #     return prefix
 
 
-# arr = [2, 4, 6, 8]
+# arr = [2, 4, 6, 8] 
 # print(prefix_sum(arr))
