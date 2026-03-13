@@ -60,3 +60,9 @@
 # s1 = student('adarsh', 19)
 # print(s1.name)
 # print(s1.age)
+
+
+arr = [10, 20, 30]
+
+for i in range(len(arr)):
+    print(i)
