@@ -6,9 +6,9 @@
 # obj = Solution()
 # obj.printNumber()
 
-class number:
-    def print_num(self):
-        n = int(input('enter no: '))
-        print(n)
-obj = number()
-obj.print_num()
+# class number:
+#     def print_num(self):
+#         n = int(input('enter no: '))
+#         print(n)
+# obj = number()
+# obj.print_num()

@@ -30,21 +30,21 @@
 
 #third largest:
 
-array = [1,12, 65, 123,66,  4, 54, 166, 127]
-lar = float('-inf')
-sec_lar = float('-inf')
-third_lar = float('-inf')
+# array = [1,12, 65, 123,66,  4, 54, 166, 127]
+# lar = float('-inf')
+# sec_lar = float('-inf')
+# third_lar = float('-inf')
 
-for n in array:
-    if n > lar:
-        third_lar = sec_lar
-        sec_lar = lar
-        lar = n
-    elif n > sec_lar and n != lar:
-        third_lar = sec_lar
-        sec_lar = n
+# for n in array:
+#     if n > lar:
+#         third_lar = sec_lar
+#         sec_lar = lar
+#         lar = n
+#     elif n > sec_lar and n != lar:
+#         third_lar = sec_lar
+#         sec_lar = n
         
-    elif n > third_lar and n!= sec_lar and n!= lar:
-        third_lar = n
-print({f'{array}, third largest in this is: {third_lar}'})
+#     elif n > third_lar and n!= sec_lar and n!= lar:
+#         third_lar = n
+# print({f'{array}, third largest in this is: {third_lar}'})
 # print(third_lar)

@@ -37,15 +37,15 @@
 
 # set name and show:
 # multiple obj:
-class student:
-    def set_name(self, name):
-        self.name = name #+ ' kumar'
+# class student:
+#     def set_name(self, name):
+#         self.name = name #+ ' kumar'
 
-    def show_name(self):
-        print(self.name + ' kumar')
+#     def show_name(self):
+#         print(self.name + ' kumar')
 
-s1 = student()
-s2 = student()
+# s1 = student()
+# s2 = student()
 
 # s1.set_name('adarsh'.title())
 # s2.set_name('rahul')
@@ -53,10 +53,10 @@ s2 = student()
 # s2.show_name()
 
 #using constructor:
-class student:
-    def __init__(self, name , age):
-        self.name = name
-        self.age = age
-s1 = student('adarsh', 19)
-print(s1.name)
-print(s1.age)
+# class student:
+#     def __init__(self, name , age):
+#         self.name = name
+#         self.age = age
+# s1 = student('adarsh', 19)
+# print(s1.name)
+# print(s1.age)
