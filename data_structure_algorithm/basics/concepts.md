@@ -118,3 +118,41 @@ i = 1 → arr[1] → 20
 i = 2 → arr[2] → 30
 
 This is Array Traversal using index.
+
+# prefix sum :
+What is Prefix Sum ?
+
+Prefix means before / previous.
+
+Prefix Sum array stores:
+
+👉 Sum of all elements from index 0 → current index
+
+Example:
+
+arr = [2, 4, 6, 8]
+
+Prefix Sum becomes:
+
+[2, 6, 12, 20]
+
+How ?
+
+2 = 2  
+6 = 2 + 4  
+12 = 2 + 4 + 6  
+20 = 2 + 4 + 6 + 8
+✅ Why Prefix Sum is Used ?
+
+Very important.
+
+Used to find sum of any subarray quickly.
+
+Without prefix sum:
+
+Every query takes → O(n)
+
+With prefix sum:
+
+Every query takes → O(1)
+👉 This is huge optimization.
