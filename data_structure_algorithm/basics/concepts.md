@@ -1,4 +1,4 @@
-loop concept :
+# loop concept :
 Golden Rule (VERY IMPORTANT)
 
 Always ask:
@@ -18,7 +18,7 @@ Then use:
 
 element
 
-len:
+# len:
 len() Function in Python
 ✅ Meaning
 
@@ -40,7 +40,7 @@ set
 
 
 
-Range :
+# Range :
 
 range() creates a sequence of numbers.
 
@@ -156,3 +156,7 @@ With prefix sum:
 
 Every query takes → O(1)
 👉 This is huge optimization.
+
+
+# Subarray means:
+👉 Continuous elements.

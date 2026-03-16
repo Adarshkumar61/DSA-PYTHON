@@ -1,19 +1,19 @@
-def sliding_window(arr, k):
-    summ = sum(arr[:k])
-    max_sum = summ
-    best_subarray = arr[:k]
-    for i in range(k, len( arr)):
-        summ = summ - arr[i-k] + arr[i]
-        current_subarray = arr[i-k+1 : i+1]
-        if summ > max_sum:
-            max_sum =  summ
-            best_subarray = current_subarray
+# def sliding_window(arr, k):
+#     summ = sum(arr[:k])
+#     max_sum = summ
+#     best_subarray = arr[:k]
+#     for i in range(k, len( arr)):
+#         summ = summ - arr[i-k] + arr[i]
+#         current_subarray = arr[i-k+1 : i+1]
+#         if summ > max_sum:
+#             max_sum =  summ
+#             best_subarray = current_subarray
 
-    print(f"Max sum: {max_sum}")
-    print(f"Subarray: {best_subarray}")
+#     print(f"Max sum: {max_sum}")
+#     print(f"Subarray: {best_subarray}")
 
-arr = [2, 1, 5, 1, 3, 2]
-sliding_window(arr, 3)
+# arr = [2, 1, 5, 1, 3, 2]
+# sliding_window(arr, 3)
 
 
 
@@ -139,3 +139,30 @@ sliding_window(arr, 3)
 # # length, subarray = smallest_subarray_with_sum(arr, target)
 # # print(f"Min length: {length}")    # 2
 # # print(f"Subarray: {subarray}")    # [4, 3]
+
+
+
+
+
+# longest subarray with at most k distinct characters (variable window):
+def longest_subarray(arr, k):
+
+    left = 0
+    current_sum = 0
+    max_length = 0
+
+    for right in range(len(arr)):
+
+        current_sum += arr[right]
+
+        while current_sum > k:
+            current_sum -= arr[left]
+            left += 1
+
+        max_length = max(max_length, right - left + 1)
+
+    return max_length
+
+
+arr = [4, 2, 1, 7, 3]
+print(longest_subarray(arr, 8))
