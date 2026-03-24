@@ -1,6 +1,3 @@
-
-
-
 def permuteUnique(nums):
 
     nums.sort()
