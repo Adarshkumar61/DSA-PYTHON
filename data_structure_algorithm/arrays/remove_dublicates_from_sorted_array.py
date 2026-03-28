@@ -1,16 +1,16 @@
-# def remove_duplicates(arr):
+def remove_duplicates(arr):
 
-#     k = 0
+    k = 0
 
-#     for i in range(1, len(arr)):
-#         if arr[i] != arr[k]:
-#             k += 1
-#             arr[k] = arr[i]
-#     return k + 1
+    for i in range(1, len(arr)):
+        if arr[i] != arr[k]:
+            k += 1
+            arr[k] = arr[i]
+    return k + 1
 
 
-# arr = [1, 2, 2, 3, 4, 4, 5]
-# k = remove_duplicates(arr)
+arr = [1, 2, 2, 3, 4, 4, 5]
+k = remove_duplicates(arr)
 
 # print("k =", k)
 # print("array =", arr)
