@@ -1,5 +1,4 @@
 from timeit import timeit
-
 small = list(range(100))           # chhota list
 large = list(range(10_000_000))    # 1 crore elements
 
