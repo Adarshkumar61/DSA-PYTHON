@@ -11,5 +11,5 @@
 # def accesschar(s):
 #     for i in range(len(s)):
 #         print(s[i])
-# s = 'hello'
+# s = 'hello' 
 # print(accesschar(s))
