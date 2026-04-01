@@ -12,4 +12,4 @@
 #     for i in range(len(s)):
 #         print(s[i])
 # s = 'hello' 
-# print(accesschar(s))
+# print(accesschar(s)) 
