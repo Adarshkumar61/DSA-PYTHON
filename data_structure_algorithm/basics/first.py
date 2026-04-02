@@ -61,7 +61,7 @@
 # print(s1.name)
 # print(s1.age)
 
-
+  
 arr = [10, 20, 30]
 
 for i in range(len(arr)):
