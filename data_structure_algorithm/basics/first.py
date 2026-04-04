@@ -55,7 +55,7 @@
 #using constructor:
 # class student:
 #     def __init__(self, name , age):
-#         self.name = name
+#         self.name = name 
 #         self.age = age
 # s1 = student('adarsh', 19)
 # print(s1.name)
