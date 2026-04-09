@@ -29,7 +29,7 @@ Move all zeroes to end
 Maintain relative order of non-zero elements
 
 Answer:
-
+ 
 [1,3,12,0,0]
 🧠 Thinking (Same Slow–Fast Logic)
 
