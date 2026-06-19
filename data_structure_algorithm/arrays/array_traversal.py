@@ -79,7 +79,7 @@ ms[ nums[i] ] →  use that value
                    open THAT box → get value inside that box
                    put that value in ans[i]
 
-                   
+
 
 whatever number is at nums[i]
 THAT number becomes the box to open
@@ -90,3 +90,14 @@ the VALUE decides the next INDEX
 """
 
 
+# def ary_tr(arr):
+#     for i in range(arr):
+#         print(arr[i])
+# j= [1,2,4,5,6,7]
+# ary_tr(j)
+
+def arry_trr(arr):
+    for i in range(len(arr)):
+        print(arr[i])
+arr = [1,2,3,4,5,6]
+arry_trr(arr)
