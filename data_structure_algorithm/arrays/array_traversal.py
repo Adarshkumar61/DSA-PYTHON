@@ -10,11 +10,11 @@
 # print(buildarray(array))
 
 
-nums = [0,2,1,5,3,4]
-ans =[]
-for i in range(len(nums)):
-    ans.append(nums[nums[i]])
-print(ans)
+# nums = [0,2,1,5,3,4]
+# ans =[]
+# for i in range(len(nums)):
+#     ans.append(nums[nums[i]])
+# print(ans)
 #explanation: 
 
 
@@ -87,20 +87,6 @@ THAT number becomes the box to open
 the VALUE decides the next INDEX
 
 
-
-
 """
 
 
-
-# array concation:
-def getConcatenation(nums):
-
-    n = len(nums)
-    ans = [0] * (2*n)
-
-    for i in range(n):
-        ans[i] = nums[i] #first half
-        ans[i+n] = nums[i] #second half
-
-    return ans
