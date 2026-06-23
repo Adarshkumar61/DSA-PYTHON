@@ -1,0 +1,3 @@
+#when array sorted
+
+def 
