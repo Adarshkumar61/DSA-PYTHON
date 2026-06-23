@@ -93,6 +93,8 @@
 
 # def removing_dublicate_in_sorted_array(arr):
 #     k = 0
+#     #k is the writer. It points to the last position where you wrote a unique value. 
+#     # It starts at 0 because index 0 is always unique by defaul
 #     for i in range(1, len(arr)):
 #         if arr[i] != arr[k]:
 #             k +=1
@@ -104,16 +106,32 @@
 # print(k)
 # print(arr[:k])
 
-def removing_dublicate_in_sorted_array(arr):
+# def removing_dublicate_in_sorted_array(arr):
+#     k = 0
+#     for i in range(1, len(arr)):
+#         if arr[i] == arr[k]:
+#             continue
+#         k+=1
+#         arr[k] = arr[i]
+#     return k+1
+
+# arr = [1,2,2,3,4,4,5]
+# k = removing_dublicate_in_sorted_array(arr)
+# print(k)
+# print(arr[:k])
+
+
+
+# fresh code : 
+
+def remove_element_from_sort_array(arr):
     k = 0
     for i in range(1, len(arr)):
-        if arr[i] == arr[k]:
-            continue
-        k+=1
-        arr[k] = arr[i]
+        if arr[i]!= arr[k]:
+            k+=1
+            arr[k] = arr[i]
     return k+1
 
-arr = [1,2,2,3,4,4,5]
-k = removing_dublicate_in_sorted_array(arr)
-print(k)
-print(arr[:k])
+arr  = [1,2,4,5,6,6,6]
+r = remove_element_from_sort_array(arr)
+print(arr[:r])

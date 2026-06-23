@@ -43,16 +43,49 @@
 # print(nums[:k])
 
 
-def removing_same_element_in_a_array(arr, value):
-    element = 0
-    for i in range(len(arr)):
-        if arr[i]!= value:
-            arr[element] = arr[i]
-            element+=1
-    return element
+# def removing_same_element_in_a_array(arr, value):
+#     element = 0
+#     for i in range(len(arr)):
+#         if arr[i]!= value:
+#             arr[element] = arr[i]
+#             element+=1
+#     return element
 
-arr = [1,2,4,5,5,3,1,2,3]
-value = 5
-result = removing_same_element_in_a_array(arr, value)
-print(result)
-print(arr[:result])
+# arr = [1,2,4,5,5,3,1,2,3]
+# value = 5
+# result = removing_same_element_in_a_array(arr, value)
+# print(result)
+# print(arr[:result])
+
+
+
+
+# def remove_specific_element_from_array(arr, val):
+#     k = 0
+#     for i in range(len(arr)):
+#         if arr[i] != val:
+#             arr[k] = arr[i]
+#             k+=1
+#     return k
+
+# arr = [1,2,4,5,6,6,4,5,6]
+# val = 6
+# r =  remove_specific_element_from_array(arr, val)
+# print(r)
+# print(arr[:r])
+
+
+
+def remove_specific_element_from_array(arr, val):
+    k = 0
+    for i in range(len(arr)):
+        if arr[i] == val:
+            continue
+        arr[k] = arr[i]
+        k+=1
+    return k
+arr = [1,2,4,5,6,6,4,5,6]
+val = 6
+r =  remove_specific_element_from_array(arr, val)
+print(r)
+print(arr[:r])
