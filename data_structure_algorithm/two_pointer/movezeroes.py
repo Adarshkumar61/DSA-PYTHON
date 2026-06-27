@@ -10,22 +10,22 @@
 
 
 
-def movezeroes(arr):
-    k = 0
-    for i in range(len(arr)):
-        if arr[i] != 0:
-            arr[k] = arr[i]
-            k+=1
-    while k< len(arr): # this fills the remaining positions with zeros
-        arr[k] = 0
-        k+=1
-    return arr
+# def movezeroes(arr):
+#     k = 0
+#     for i in range(len(arr)):
+#         if arr[i] != 0:
+#             arr[k] = arr[i]
+#             k+=1
+#     while k< len(arr): # this fills the remaining positions with zeros
+#         arr[k] = 0
+#         k+=1
+#     return arr
 
 
-arr = [1, 0, 3, 0, 6, 3, 0]
-r= movezeroes(arr)
+# arr = [1, 0, 3, 0, 6, 3, 0]
+# r= movezeroes(arr)
 
-print(r)
+# print(r)
 
 
 # Explanation:
@@ -46,3 +46,22 @@ print(r)
 # as:
 
 # Next empty position for a non-zero element
+
+
+
+
+
+# def compact_sensor_reading(readings):
+#     k = 0
+#     for i in range(len(readings)):
+#         if readings[i] !=0:
+#             readings[k] = readings[i]
+#             k+=1
+#     while k < len(readings):
+#         readings[k] = 0
+#         k+=1
+#     return readings
+
+# readings = [1, 0, 3, 0, 6, 3, 0]
+# r = compact_sensor_reading(readings)
+# print(r)
