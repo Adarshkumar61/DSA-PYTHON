@@ -16,12 +16,33 @@ def movezeroes(arr):
         if arr[i] != 0:
             arr[k] = arr[i]
             k+=1
-    return k
-    # while k< len(arr):
-    #     arr[k] = 0
-    #     k+=1
-    # return arr
+    while k< len(arr): # this fills the remaining positions with zeros
+        arr[k] = 0
+        k+=1
+    return arr
+
 
 arr = [1, 0, 3, 0, 6, 3, 0]
 r= movezeroes(arr)
-print(arr[:r])
+
+print(r)
+
+
+# Explanation:
+
+
+# i
+
+# as:
+
+# Scanner
+
+# It checks every element.
+
+# And:
+
+# k
+
+# as:
+
+# Next empty position for a non-zero element
