@@ -65,3 +65,32 @@
 # readings = [1, 0, 3, 0, 6, 3, 0]
 # r = compact_sensor_reading(readings)
 # print(r)
+# 🏆 Challenge:
+
+# Now that you've mastered this pattern, don't do another LeetCode problem immediately.
+
+# Instead, solve this real interview variation:
+
+# readings = [120, -1, 90, -1, 60, 45, -1]
+
+# Here:
+
+# -1 = invalid reading.
+# Move all valid readings to the front.
+# Fill the remaining positions with -1.
+# Do it in-place using O(1) extra space.
+
+# def good_negative_entries_place(readings):
+#     k = 0
+#     for i in range(len(readings)):
+#         if readings[i] != -1:
+#             readings[k] = readings[i]
+#             k +=1
+#     while k < len(readings):
+#         readings[k] = -1
+#         k+=1
+#     return readings
+
+# readings = [120, -1, 90, -1, 60, 45, -1]
+# r = good_negative_entries_place(readings)
+# print(r)
