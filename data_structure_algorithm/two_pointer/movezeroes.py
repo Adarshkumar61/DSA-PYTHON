@@ -94,3 +94,22 @@
 # readings = [120, -1, 90, -1, 60, 45, -1]
 # r = good_negative_entries_place(readings)
 # print(r)
+
+
+
+
+
+
+def move_zeroes(p):
+    k = 0
+    for i in range(len(p)):
+        if p[i] != 0:
+            p[k] = p[i]
+            k+=1
+    while k < len(p):
+            p[k] = 0
+            k+=1
+    return p
+
+p = [1, 2,3,5,0,0,7,4,0,4,0,7,9]
+print(move_zeroes(p))
