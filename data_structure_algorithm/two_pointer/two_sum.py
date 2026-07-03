@@ -91,12 +91,4 @@ Is current element NEW ?
 OR is it DUPLICATE ?"""
 
 #move zero to end of array :
-def movezeroes(arr):
-    slow = 0
-    for fast in range(len(arr)):
-        if arr[fast]!= 0:
-            arr[slow], arr[fast] = arr[fast], arr[slow]
-            slow+=1
-    return arr
-arr = [0,1,0,3,12]
-print(movezeroes(arr))
+
