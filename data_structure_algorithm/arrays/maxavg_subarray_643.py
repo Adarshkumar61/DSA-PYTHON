@@ -5,7 +5,7 @@ def max_average_subarray(nums, k):
     max_sum = summ
 
     for i in range(k, len(nums)):
-
+ 
         #removing left element and and subtracting from summ
         summ -= nums[i-k]
         # adding one right element and adding to summ
