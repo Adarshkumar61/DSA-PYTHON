@@ -124,14 +124,32 @@
 
 # fresh code : 
 
-def remove_element_from_sort_array(arr):
-    k = 0
-    for i in range(1, len(arr)):
-        if arr[i]!= arr[k]:
-            k+=1
-            arr[k] = arr[i]
-    return k+1
+# from os import remove
 
-arr  = [1,2,4,5,6,6,6]
-r = remove_element_from_sort_array(arr)
-print(arr[:r])
+
+# def remove_element_from_sort_array(arr):
+#     k = 0
+#     for i in range(1, len(arr)):
+#         if arr[i]!= arr[k]:
+#             k+=1
+#             arr[k] = arr[i]
+#     return k
+
+# arr  = [1,2,4,5,6,6,6]
+# r = remove_element_from_sort_array(arr)
+# print(arr[:r])
+
+# we started from index1 cause first number which is [0] is always unique
+
+def remove_dublicate_element(nums):
+    k = 0
+    for i in range(1, len(nums)):
+        if nums[i] != nums[k]:
+            k+=1
+            nums[k] = nums[i]
+            
+    return k+1
+nums = [1,2,2,3,3,4,5,6,6,6,6,6]
+r = remove_dublicate_element(nums)
+print(r)
+print(nums[:r])

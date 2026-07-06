@@ -76,16 +76,31 @@
 
 
 
-def remove_specific_element_from_array(arr, val):
+# def remove_specific_element_from_array(arr, val):
+#     k = 0
+#     for i in range(len(arr)):
+#         if arr[i] == val:
+#             continue
+#         arr[k] = arr[i]
+#         k+=1
+#     return k
+# arr = [1,2,4,5,6,6,4,5,6]
+# val = 6
+# r =  remove_specific_element_from_array(arr, val)
+# print(r)
+# print(arr[:r])
+
+
+
+def remove_var_element(nums, value):
     k = 0
-    for i in range(len(arr)):
-        if arr[i] == val:
-            continue
-        arr[k] = arr[i]
-        k+=1
+    for i in range(len(nums)):
+        if nums[i] != value:
+            nums[k] = nums[i]
+            k+=1
     return k
-arr = [1,2,4,5,6,6,4,5,6]
-val = 6
-r =  remove_specific_element_from_array(arr, val)
+nums = [1,2,3,5,6,2,3]
+value = 3
+r = remove_var_element(nums, value)
 print(r)
-print(arr[:r])
+print(nums[:r])
