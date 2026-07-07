@@ -29,18 +29,18 @@
 
 
 
-def two_sum(nums, target):
-    left = 0
-    right = len(nums) - 1
-    while left < right:
-        curr_sum = nums[left] + nums[right]
-        if curr_sum > target:
-            right -=1
-        elif curr_sum < target:
-            left +=1
-        else:
-            return nums[left], nums[right]
+# def two_sum(nums, target):
+#     left = 0
+#     right = len(nums) - 1
+#     while left < right:
+#         curr_sum = nums[left] + nums[right]
+#         if curr_sum > target:
+#             right -=1
+#         elif curr_sum < target:
+#             left +=1
+#         else:
+#             return nums[left], nums[right]
         
-nums = [2, 7, 11, 15]
-target = 13
-print(two_sum(nums, target))
+# nums = [2, 7, 11, 15]
+# target = 13
+# print(two_sum(nums, target))

@@ -143,19 +143,39 @@ Done.
 """
 
 # final code :
-# def max_window_sum(arr, val):
-#     summ = sum(arr[:val])
-#     max_value = summ
-#     for i in range(val, len(arr)):
+def max_window_sum(arr, val):
+    summ = sum(arr[:val])
+    max_value = summ
+    for i in range(val, len(arr)):
 
-#         summ -= arr[i - val]
-#         summ += arr[i]
+        summ -= arr[i - val]
+        summ += arr[i]
 
-#         if summ > max_value:
-#             max_value = summ
-#     return max_value
+        if summ > max_value:
+            max_value = summ
+    return max_value
 
+arr = [2,1,5,1,3,2]
+val = 3
+r = max_window_sum(arr, val)
+print(f'max sum of array of 3 joint element is : {r}')
+
+
+
+
+
+
+# def max_sum_of_given_length(nums, target):
+#     curr_sum = sum(nums[:target])
+#     max_sum = curr_sum
+#     for i in range(target, len(nums)):
+#         curr_sum -= nums[i - target]
+#         curr_sum += nums[i]
+#         if curr_sum > max_sum:
+#             max_sum = curr_sum
+
+#     return max_sum
 # arr = [2,1,5,1,3,2]
 # val = 3
-# r = max_window_sum(arr, val)
+# r = max_sum_of_given_length(arr, val)
 # print(f'max sum of array of 3 joint element is : {r}')

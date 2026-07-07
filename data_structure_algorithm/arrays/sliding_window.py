@@ -145,24 +145,44 @@
 
 
 # longest subarray with at most k distinct characters (variable window):
-def longest_subarray(arr, k):
+# def longest_subarray(arr, k):
 
+#     left = 0
+#     current_sum = 0
+#     max_length = 0
+
+#     for right in range(len(arr)):
+
+#         current_sum += arr[right]
+
+#         while current_sum > k:
+#             current_sum -= arr[left]
+#             left += 1
+
+#         max_length = max(max_length, right - left + 1)
+
+#     return max_length
+
+
+# arr = [4, 2, 1, 7, 3]
+# print(longest_subarray(arr, 8))
+
+
+
+
+
+
+
+def longest_length_to_get_target(nums, target):
     left = 0
-    current_sum = 0
+    curr_sum = 0
     max_length = 0
-
-    for right in range(len(arr)):
-
-        current_sum += arr[right]
-
-        while current_sum > k:
-            current_sum -= arr[left]
-            left += 1
-
+    for right in range(len(nums)):
+        curr_sum += nums[right]
+        while curr_sum > target:
+            curr_sum -= nums[left]
+            left+=1
         max_length = max(max_length, right - left + 1)
-
     return max_length
-
-
-arr = [4, 2, 1, 7, 3]
-print(longest_subarray(arr, 8))
+nums = [4, 2, 1, 7, 3]
+print(longest_length_to_get_target(nums, 8))
