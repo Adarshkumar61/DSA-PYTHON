@@ -173,7 +173,24 @@
 
 
 
-def longest_length_to_get_target(nums, target):
+# def longest_length_to_get_target(nums, target):
+#     left = 0
+#     curr_sum = 0
+#     max_length = 0
+#     for right in range(len(nums)):
+#         curr_sum += nums[right]
+#         while curr_sum > target:
+#             curr_sum -= nums[left]
+#             left+=1
+#         max_length = max(max_length, right - left + 1)
+#     return max_length
+# nums = [4, 2, 1, 7, 3]
+# print(longest_length_to_get_target(nums, 7))
+
+
+
+
+def sliding_target_window(nums, target):
     left = 0
     curr_sum = 0
     max_length = 0
@@ -181,8 +198,10 @@ def longest_length_to_get_target(nums, target):
         curr_sum += nums[right]
         while curr_sum > target:
             curr_sum -= nums[left]
-            left+=1
-        max_length = max(max_length, right - left + 1)
+            left +=1
+        max_length = max(max_length, right - left +1)
     return max_length
+
 nums = [4, 2, 1, 7, 3]
-print(longest_length_to_get_target(nums, 8))
+target = 7
+print(sliding_target_window(nums, target))

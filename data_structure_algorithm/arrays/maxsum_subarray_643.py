@@ -143,7 +143,7 @@ Done.
 """
 
 # final code :
-def max_window_sum(arr, val):
+def max_sum(arr, val):
     summ = sum(arr[:val])
     max_value = summ
     for i in range(val, len(arr)):
@@ -157,7 +157,7 @@ def max_window_sum(arr, val):
 
 arr = [2,1,5,1,3,2]
 val = 3
-r = max_window_sum(arr, val)
+r = max_sum(arr, val)
 print(f'max sum of array of 3 joint element is : {r}')
 
 
