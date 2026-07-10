@@ -150,7 +150,7 @@ def max_sum(arr, val):
 
         summ -= arr[i - val]
         summ += arr[i]
-
+        
         if summ > max_value:
             max_value = summ
     return max_value

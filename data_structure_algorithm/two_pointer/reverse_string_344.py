@@ -62,7 +62,7 @@ def reverse_str_(strr):
         if strr[left] == 2:
             strr.pop(left)
             right -=1
-            continue
+            # continue
         strr[left], strr[right] = strr[right], strr[left]
         left +=1
         right -=1

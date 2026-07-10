@@ -11,14 +11,14 @@ def two_sum(arr, target):
         elif curr_sum < target:
             left+=1
         else:
-            return [left, right]
+            return [left, right], curr_sum
  
 arr = [2, 7, 11, 15]
 target = 9
 # print(two_sum(arr, target))
 r = two_sum(arr, target)
 print(r)
-print(arr[r[0]], arr[r[1]])
+# print(arr[r[0]], arr[r[1]])
 """
 explanation :When:
 
