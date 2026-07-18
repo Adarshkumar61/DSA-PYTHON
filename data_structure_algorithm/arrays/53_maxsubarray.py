@@ -1,41 +1,26 @@
-def maxSubArray(nums):
+"""kadane algorithm is a famous algorithm 
+to find the maximum sum of a contiguous subarray in an
+array of integers.
+The algorithm works by iterating through the array
+and keeping track of the current sum of the subarray 
+and the maximum sum found so far. If the current sum becomes negative,
+it resets to zero, as starting a new subarray would yield a higher sum.
+"""
+# def maxSubArray(nums):
 
-    current_sum = nums[0]
-    max_sum = nums[0]
+#     current_sum = nums[0]
+#     max_sum = nums[0]
 
-    for i in range(1, len(nums)):
+#     for i in range(1, len(nums)):
 
-        current_sum = max(nums[i], current_sum + nums[i])
+#         current_sum = max(nums[i], current_sum + nums[i])
 
-        max_sum = max(max_sum, current_sum)
+#         max_sum = max(max_sum, current_sum)
 
-    return max_sum
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#     return max_sum
+# nums = [-2,1,-3,4,-1,2,1,-5,4]
+# r = maxSubArray(nums)
+# print(f'maximum sum of subarray is : {r}')
 
 
 
@@ -55,26 +40,26 @@ def maxSubArray(nums):
 
 
 # returning subarray with index
-def max_sub_array_with_indices(nums):
-    curr_sum = nums[0]
-    max_sum = nums[0]
-    start = 0
-    end = 0
-    temp = 0
-    for i in range(1, len(nums)):
-        if nums[i] > nums[i] + curr_sum:
-            curr_sum = nums[i]
-            temp = i
-        else:
-            curr_sum += nums[i]
-        if curr_sum > max_sum:
-            max_sum = curr_sum
-            start = temp
-            end = i
-    return max_sum, nums[start:end+1]
-nums = [-2,1,-3,4,-1,2,1,-5,4]
-r = max_sub_array_with_indices(nums)
-print(f'maximum sum of subarray is : {r[0]} and the subarray is : {r[1]}')
+# def max_sub_array_with_indices(nums):
+#     curr_sum = nums[0]
+#     max_sum = nums[0]
+#     start = 0
+#     end = 0
+#     temp = 0
+#     for i in range(1, len(nums)):
+#         if nums[i] > nums[i] + curr_sum:
+#             curr_sum = nums[i]
+#             temp = i
+#         else:
+#             curr_sum += nums[i]
+#         if curr_sum > max_sum:
+#             max_sum = curr_sum
+#             start = temp
+#             end = i
+#     return max_sum, nums[start:end+1]
+# nums = [-2,1,-3,4,-1,2,1,-5,4]
+# r = max_sub_array_with_indices(nums)
+# print(f'maximum sum of subarray is : {r[0]} and the subarray is : {r[1]}')
 
 
 
@@ -203,3 +188,29 @@ Output:
 
 [4, -1, 2, 1]
 """
+
+
+def max_sub_array_with_indices(nums):
+    curr_sum = nums[0]
+    max_sum = nums[0]
+    start = 0
+    end = 0
+    temp_start = 0
+    for i in range(1, len(nums)):
+        curr_sum = max(nums[i], curr_sum +nums[i])
+        if curr_sum == nums[i]:
+            temp_start = i
+            curr_sum = nums[i]
+        else:
+            curr_sum += nums[i]
+        max_sum = max(max_sum, curr_sum)
+        if max_sum == curr_sum:
+            start = temp_start
+            end = i
+        
+
+    return max_sum, nums[start:end+1]
+
+nums= [-2,1,-3,4,-1,2,1,-5,4]
+r = max_sub_array_with_indices(nums)
+print(f'maximum sum of subarray is : {r[0]} and the subarray is : {r[1]}')

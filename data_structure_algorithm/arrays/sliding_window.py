@@ -17,28 +17,6 @@
 
 
 
-# def max_sum_subarray(arr, k):
-
-#     window_sum = sum(arr[:k])
-#     max_sum = window_sum
-#     best_window = arr[:k]
-
-#     for i in range(k, len(arr)):
-
-#         window_sum = window_sum - arr[i-k] + arr[i]
-
-#         current_window = arr[i-k+1 : i+1]
-
-#         if window_sum > max_sum:
-#             max_sum = window_sum
-#             best_window = current_window
-
-#     print("Max Sum:", max_sum)
-#     print("Subarray:", best_window)
-
-
-# arr = [2, 1, 5, 1, 3, 2]
-# max_sum_subarray(arr, 3)
 
 
 
@@ -62,39 +40,38 @@
 
 
 
-# def max_sum_subarray(arr, k):
-#     n = len(arr)
+def max_sum_subarray(arr, k):
+    n = len(arr)
     
-#     if n < k:
-#         return -1, []
+    if n < k:
+        return -1, []
     
-#     # Step 1: Build the first window of size k
-#     window_sum = sum(arr[:k])  # sum of first k elements
-#     max_sum = window_sum
-#     max_start = 0  # tracks where best window starts
+    # Step 1: Build the first window of size k
+    window_sum = sum(arr[:k])  # sum of first k elements
+    max_sum = window_sum
+    max_start = 0  # tracks where best window starts
     
-#     # Step 2: Slide the window from index k to n-1
-#     for i in range(k, n):
-#         # Add the new element coming in (arr[i])
-#         # Remove the element going out (arr[i - k])
-#         window_sum = window_sum + arr[i] - arr[i - k]
+    # Step 2: Slide the window from index k to n-1
+    for i in range(k, n):
+        # Add the new element coming in (arr[i])
+        # Remove the element going out (arr[i - k])
+        window_sum = window_sum + arr[i] - arr[i - k]
         
-#         # Update max if current window is better
-#         if window_sum > max_sum:
-#             max_sum = window_sum
-#             max_start = i - k + 1  # window starts here
+        # Update max if current window is better
+        if window_sum > max_sum:
+            max_sum = window_sum
+            max_start = i - k + 1  # window starts here
     
-#     # Return max sum AND the actual subarray
-#     result_subarray = arr[max_start : max_start + k]
-#     return max_sum, result_subarray
+    # Return max sum AND the actual subarray
+    result_subarray = arr[max_start : max_start + k]
+    return max_sum, result_subarray
 
 
 # arr = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3]
 # k = 3
 # max_sum, subarray = max_sum_subarray(arr, k)
 # print(f"Max sum: {max_sum}")        # 17
-# print(f"Subarray: {subarray}")      # [9, 2, 6] — wait, let me recalc...
-# # Actually: [5, 9, 2] → 16, [9, 2, 6] → 17  ✓
+# print(f"Subarray: {subarray}")      # [9, 2, 6]
 
 
 # # ============================================================
@@ -190,18 +167,44 @@
 
 
 
-def sliding_target_window(nums, target):
+# def sliding_target_window(nums, target):
+#     left = 0
+#     curr_sum = 0
+#     max_length = 0
+#     for right in range(len(nums)):
+#         curr_sum += nums[right]
+#         while curr_sum > target:
+#             curr_sum -= nums[left]
+#             left +=1
+#         max_length = max(max_length, right - left +1)
+#     return max_length
+
+# nums = [4, 2, 1, 7, 3]
+# target = 7
+# print(sliding_target_window(nums, target))
+
+
+
+
+
+
+
+
+
+
+
+def sliding_window(nums, target):
     left = 0
-    curr_sum = 0
-    max_length = 0
-    for right in range(len(nums)):
-        curr_sum += nums[right]
+    curr_sum = nums[0]
+    max_sum = nums[0]
+    for i in range(1,len(nums)):
+        curr_sum += nums[i]
         while curr_sum > target:
             curr_sum -= nums[left]
             left +=1
-        max_length = max(max_length, right - left +1)
-    return max_length
 
+        max_sum = max(max_sum, i -left +1)
+    return max_sum
 nums = [4, 2, 1, 7, 3]
 target = 7
-print(sliding_target_window(nums, target))
+print(sliding_window(nums, target))
